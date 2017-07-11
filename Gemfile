@@ -35,6 +35,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Gemas adicionales
 gem 'glyphicons-rails', '~> 0.1.2'
 gem "font-awesome-rails"
+gem 'tzinfo-data'
 
 
 group :development, :test do
