@@ -4,37 +4,7 @@
       padding: 50px;
    }
 </style>
-
-<!-- Carousel -->
-   <div id="myCarousel" class="carousel slide" data-ride="carousel" style="margin-top: -1%; z-index:-1;">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-         <li data-target="#myCarousel" data-slide-to="1"></li>
-         <li data-target="#myCarousel" data-slide-to="2"></li>
-      </ol>
-      <!-- Wrapper for slides -->
-      <div class="carousel-inner" style="height:570px;">
-         <div class="item active" style="height:100%">
-            <%= image_tag "Banner1" %>
-         </div>
-         <div class="item" style="height:100%">
-            <%= image_tag "Banner2" %>
-         </div>
-         <div class="item" style="height:100%">
-            <%= image_tag "Banner3" %>
-         </div>
-      </div>
-   </div>
-   <!-- Carousel Controls -->
-   <a class="left carousel-control" href="#myCarousel" data-slide="prev" style="margin-top: 5%; margin-bottom: 30px;">
-      <i class="fa fa-chevron-left" aria-hidden="true" style="position: absolute; top: 250px;"></i>
-      </a>
-      <a class="right carousel-control" href="#myCarousel" data-slide="next" style="margin-top: 5%; margin-bottom: 30px;">
-      <i class="fa fa-chevron-right" aria-hidden="true" style="position: absolute; top: 250px;"></i>
-      </a>
-      
-   
+<%= render "layouts/carousel"%>
 <!-- News Container -->
    <div class="newscont container-fluid" style="margin-top: -2%; width: 90%; box-shadow: -7px 6px 8px #888888;">
       <div>Container for news</div>

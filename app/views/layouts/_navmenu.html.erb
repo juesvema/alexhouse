@@ -6,7 +6,7 @@
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="background-color: rgba(54, 85, 132, 0.1); position:absolute !important;
     border-bottom: transparent;">
    <div class="container">
-         <a href="/"><img src="/logoAH.png" width="8%" ></a>
+         <img src="/logoAH.png" width="8%">
          <div style="    text-align: right;
              margin-top: -4%;
              margin-bottom: 2.5%;">
@@ -36,8 +36,8 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
          <ul class="nav navbar-nav">
-            <li class="active"><a href="/">Alexhouse</a></li>
-            <li ><a href="/noticias"><%= t "layouts.noticias" %></a></li>
+            <li><%= link_to "Alexhouse", root_path %></li>
+            <li ><%= link_to t("layouts.noticias"), noticias_path %></li>
             <li class="dropdown">
                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= t "layouts.servicios" %> <b class="caret"></b></a>
                <ul class="dropdown-menu">
@@ -68,4 +68,4 @@
    </div>
    <!-- /.container-fluid -->
 </nav>
-<br><br><br><br>
+<br><br><br><br><br><br>
