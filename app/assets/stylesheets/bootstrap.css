@@ -15,7 +15,6 @@ Image credits: unsplash.com
 /*           Carousel           */
 /********************************/
 
-
   /********************************/
   /*       Fade Bs-carousel       */
   /********************************/
@@ -26,6 +25,7 @@ Image credits: unsplash.com
   }
   .fade-carousel .carousel-inner .item {
       height: 100vh;
+      text-align: center;
   }
   .fade-carousel .carousel-indicators > li {
       margin: 0 2px;
@@ -126,7 +126,7 @@ Image credits: unsplash.com
       .hero { width: 980px; }    
   }
   @media screen and (max-width: 640px){
-      .hero h1 { font-size: 4em; }    
+      .hero { font-size: 4em; }    
   }
 
 html {
@@ -1246,9 +1246,10 @@ img {
 .thumbnail a > img,
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
-  display: block;
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  max-height: 100%;
+  vertical-align: middle;
+  text-align: center;
 }
 .img-rounded {
   border-radius: 6px;
