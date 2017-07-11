@@ -1,22 +1,28 @@
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="width: 90%;
-    margin-left: 5%;
-    margin-top: 0%;
-    position:absolute !important;">
+<style>
+   .bandera{
+      height: 35px;
+   }
+</style>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="background-color: rgba(54, 85, 132, 0.1); position:absolute !important;
+    border-bottom: transparent;">
    <div class="container">
-         <a href="/"><img src="/logoAH.jpg" width="8%" ></a>
+         <a href="/"><img src="/logoAH.png" width="8%" ></a>
          <div style="    text-align: right;
              margin-top: -4%;
              margin-bottom: 2.5%;">
-            Idioma:
-            <%= link_to_unless_current "English", locale: "en" %>
-            <%= link_to_unless_current "Español", locale: "es" %>            
+            <%= t "layouts.idioma" %>:
+            <%= link_to_unless_current  image_tag("en", :class => "bandera"), locale: "en" %>
+            <%= link_to_unless_current  image_tag("es", :class => "bandera"), locale: "es" %>
+            <%= link_to_unless_current  image_tag("ger", :class => "bandera"), locale: "ger" %> 
+            <%= link_to_unless_current  image_tag("arabe", :class => "bandera"), locale: "arabe" %> 
+            <%= link_to_unless_current  image_tag("fr", :class => "bandera"), locale: "fr" %> 
          </div>
    </div>
    </nav>
    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="width: 90%;
     margin-left: 5%;
-    margin-top: 6%;
-    position:absolute !important;">
+    margin-top: 5%;
+    position:absolute !important; box-shadow: 0px 2px 8px #888888;">
    <div class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
@@ -26,53 +32,37 @@
          <span class="icon-bar"></span>
          <span class="icon-bar"></span>
          </button>
-         <a class="navbar-brand" href="/">Alexhouse</a>
       </div>
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
          <ul class="nav navbar-nav">
-            <li class="active"><a href="/noticias"><%= t "layouts.noticias" %></a></li>
+            <li class="active"><a href="/">Alexhouse</a></li>
+            <li ><a href="/noticias"><%= t "layouts.noticias" %></a></li>
             <li class="dropdown">
-               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Servicios <b class="caret"></b></a>
+               <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= t "layouts.servicios" %> <b class="caret"></b></a>
                <ul class="dropdown-menu">
-                  <li><%= link_to 'Hoteles', hoteles_path %></li>
+                  <li><%= link_to t("layouts.hoteles"), hoteles_path %></li>
                   <li class="divider"></li>
-                  <li><%= link_to 'Instituto de Idiomas', idiomas_path %></li>
+                  <li><%= link_to t("layouts.idiomas"), idiomas_path %></li>
                   <li class="divider"></li>
-                  <li><%= link_to 'Zapatería y Artículos de Cuero', zapateria_path %></li>
+                  <li><%= link_to t("layouts.zapateria"), zapateria_path %></li>
                   <li class="divider"></li>
-                  <li><%= link_to 'Outsourcing de Talento Humano', outsourcing_path %></li>
+                  <li><%= link_to t("layouts.talento"), outsourcing_path %></li>
                   <li class="divider"></li>
-                  <li><%= link_to 'Agencia viajes y de Estudios en el Exterior', viajes_path %></li>
+                  <li><%= link_to t("layouts.viajes"), viajes_path %></li>
                   <li class="divider"></li>
-                  <li><%= link_to 'Restaurantes y salones de eventos', restaurantes_path %></li>
+                  <li><%= link_to t("layouts.restaurante"), restaurantes_path %></li>
                   <li class="divider"></li>
-                  <li><%= link_to 'Diseño de páginas Web y Publicidad', publicidad_path %></li>
+                  <li><%= link_to t("layouts.web"), publicidad_path %></li>
                   <li class="divider"></li>
-                  <li><%= link_to 'Spa y Clínica de reducción de peso', spa_path %></li>
+                  <li><%= link_to t("layouts.spa"), spa_path %></li>
                   <li class="divider"></li>
-                  <li><%= link_to 'Dotaciones de Uniformes', uniformes_path %></li>
+                  <li><%= link_to t("layouts.uniformes"), uniformes_path %></li>
                   <li class="divider"></li>
-                  <li><%= link_to 'Club de Cocina', cocina_path %></li>
+                  <li><%= link_to t("layouts.cocina"), cocina_path %></li>
                </ul>
             </li>
          </ul>
-         
-         <form class="navbar-form" role="search">
-            <div class="input-group">
-               <input type="text" class="form-control pull-right" style="font-size: 20px; width: 300px; margin-right: 35px, border: 1px solid black; background-color: #e5e5e5;" placeholder="Search">
-               <span class="input-group-btn">
-               <button type="reset" class="btn btn-default">
-               <i class="fa fa-times" aria-hidden="true">
-               <span class="sr-only">Close</span></i>
-               </button>
-               <button type="submit" class="btn btn-default">
-               <i class="fa fa-search" aria-hidden="true">
-               <span class="sr-only">Search</span></i>
-               </button>
-               </span>
-            </div>
-         </form>
       </div>
       <!-- /.navbar-collapse -->
    </div>
