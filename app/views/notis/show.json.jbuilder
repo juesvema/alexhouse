@@ -1,0 +1,1 @@
+json.partial! "notis/noti", noti: @noti

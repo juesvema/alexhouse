@@ -1,0 +1,27 @@
+<style>
+  .medidaImagen1{
+    width: 250px;
+    height: 250px;
+  }
+</style>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <%= @noti.titulo %>
+</p>
+
+<p>
+  <%= @noti.categoria %>
+</p>
+
+<p>
+  <%= image_tag @noti.imagen.url, :class=>"medidaImagen1" %>
+</p>
+
+<p>
+  <%= @noti.contenido %>
+</p>
+
+<%= link_to 'Edit', edit_noti_path(@noti) %> |
+<%= link_to 'Back', notis_path %>

@@ -1,0 +1,39 @@
+<style>
+  h1.estiloTitulo {
+    margin-bottom: 10px;
+    padding-left: 70px;
+    font-size: 2.143em;
+    line-height: 1em;
+    font-family: "Georgia", Times New Roman, serif;
+    height: 35px;
+    font-style: italic;
+    text-align:center;
+  }
+  .medidaImagen{
+    width: 350px;
+    height: 350px;
+  }
+</style>
+<p id="notice"><%= notice %></p>
+
+<h1 class="estiloTitulo"><%= t "layouts.noticias" %></h1>
+
+  <tbody>
+    <div class="row" style="width: 94%; margin-left: 3%;">
+    <% @notis.each do |noti| %>
+    <div class="col-md-4">
+      <h3 style="text-align:center; margin-left: -15%;"><%= noti.titulo %></h3>
+        <p><%= image_tag noti.imagen.url, :class=>"medidaImagen" %></p>
+        <p style="width: 94%;"><%= truncate(noti.contenido, :length => 100) %></p>
+        <p><%= noti.categoria %> - <%= noti.created_at.strftime("%Y-%m-%d") %></p>
+        <p><%= link_to '+ Leer mas', noti %></p>
+        <%#= link_to 'Edit', edit_noti_path(noti) %>
+        <%#= link_to 'Destroy', noti, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
+    <% end %>
+    </div>
+  </tbody>
+
+<br>
+
+<%= link_to 'New Noti', new_noti_path %>

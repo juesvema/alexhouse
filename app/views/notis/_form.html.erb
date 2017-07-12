@@ -1,0 +1,33 @@
+<%= form_for(@noti, :html => {:multipart => true}) do |f| %>
+  <% if @noti.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@noti.errors.count, "error") %> prohibited this noti from being saved:</h2>
+
+      <ul>
+      <% @noti.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :imagen %><br>
+    <%= f.file_field :imagen %>
+  </div>
+  <div class="field">
+    <%= f.label :titulo %><br>
+    <%= f.text_field :titulo %>
+  </div>
+  <div class="field">
+    <%= f.label :contenido %><br>
+    <%= f.text_area :contenido %>
+  </div>
+  <div class="field">
+    <%= f.label :categoria %><br>
+    <%= f.select :categoria, options_for_select([[''],['Hoteles'],['Idiomas'],['Zapatería'],['Outsourcing'],['Viajes'],['Eventos'],['Web y Publicidad'],['Spa'],['Uniformes'],['Cocina']]), id:"categoria" %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

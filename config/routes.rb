@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
-  get 'noticias', to: "noticias#index"
-
+  
+  resources :notis
+  
   get 'cocina', to: "cocina#index"
 
   get 'uniformes', to: "uniformes#index"

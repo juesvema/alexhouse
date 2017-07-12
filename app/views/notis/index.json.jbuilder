@@ -1,0 +1,1 @@
+json.array! @notis, partial: 'notis/noti', as: :noti
