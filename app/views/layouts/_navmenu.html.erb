@@ -6,7 +6,7 @@
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="background-color: rgba(54, 85, 132, 0.1); position:absolute !important;
     border-bottom: transparent;">
    <div class="container">
-         <img src="/logoAH.png" width="8%">
+         <img src="/assets/Logo.png" width="8%">
          <div style="    text-align: right;
              margin-top: -4%;
              margin-bottom: 2.5%;">
@@ -14,8 +14,8 @@
             <%= link_to_unless_current  image_tag("en", :class => "bandera"), locale: "en" %>
             <%= link_to_unless_current  image_tag("es", :class => "bandera"), locale: "es" %>
             <%= link_to_unless_current  image_tag("ger", :class => "bandera"), locale: "ger" %> 
-            <%= link_to_unless_current  image_tag("arabe", :class => "bandera"), locale: "arabe" %> 
             <%= link_to_unless_current  image_tag("fr", :class => "bandera"), locale: "fr" %> 
+            <%= link_to_unless_current  image_tag("arabe", :class => "bandera"), locale: "arabe" %> 
          </div>
    </div>
    </nav>
@@ -60,6 +60,8 @@
                   <li><%= link_to t("layouts.uniformes"), uniformes_path %></li>
                   <li class="divider"></li>
                   <li><%= link_to t("layouts.cocina"), cocina_path %></li>
+                  <li class="divider"></li>
+                  <li><%= link_to "Kontakto", kontakto_path %></li>
                </ul>
             </li>
          </ul>

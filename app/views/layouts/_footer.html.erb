@@ -63,21 +63,23 @@ footer { background-color:#0184ba; min-height:350px; font-family: 'Open Sans', s
      color:white !important;
  }
 </style>
+
 <link href="https://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css" rel="stylesheet">
+
 <!--footer start from here-->
 <footer>
   <div class="container" style="margin-top: 10px;">
     <div class="row">
       <div class="col-md-3 col-sm-6 footer-col">
-        <div class="logofooter"> <img src="/logo.png" width="50%"></div>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
+        <div class="logofooter"> <img src="/logo.png" width="70%"></div>
+        <p>¿Quiénes somos?</p>
         <p><i class="fa fa-map-pin" style="color: red;"></i> Dirección</p>
         <p><i class="fa fa-phone" style="color: black;"></i> Telefono</p>
-        <p><i class="fa fa-envelope" style="color: white;"></i> E-mail : ejemplo@hotmail.com</p>
+        <p><i class="fa fa-envelope" style="color: white;"></i> info@alexhousegroup.com</p>
         
       </div>
       <div class="col-md-3 col-sm-6 footer-col">
-        <h6 class="heading7">GENERAL LINKS</h6>
+        <h6 class="heading7"><%= t "layouts.general" %></h6>
         <ul class="footer-ul">
           <li><%= link_to t("layouts.hoteles"), hoteles_path, :class => "blanco" %></li>
           <li><%= link_to t("layouts.idiomas"), idiomas_path, :class => "blanco" %></li>
@@ -89,6 +91,7 @@ footer { background-color:#0184ba; min-height:350px; font-family: 'Open Sans', s
           <li><%= link_to t("layouts.spa"), spa_path, :class => "blanco" %></li>
           <li><%= link_to t("layouts.uniformes"), uniformes_path, :class => "blanco" %></li>
           <li><%= link_to t("layouts.cocina"), cocina_path, :class =>"blanco" %></li>
+          <li><%= link_to "Kontakto", kontakto_path, :class =>"blanco" %></li>
         </ul>
       </div>
       <div class="col-md-3 col-sm-6 footer-col">
@@ -116,7 +119,7 @@ footer { background-color:#0184ba; min-height:350px; font-family: 'Open Sans', s
 <div class="copyright">
   <div class="container">
     <div class="col-md-6">
-      <p>© 2017 - Alexhouse</p>
+      <p>© 2017 - Alexhouse - WeaverNet</p>
     </div>
   </div>
 </div>

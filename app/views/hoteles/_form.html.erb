@@ -1,0 +1,49 @@
+<%= form_for(@hotele, :html => {:multipart => true}) do |f| %>
+  <% if @hotele.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@hotele.errors.count, "error") %> prohibited this hotele from being saved:</h2>
+
+      <ul>
+      <% @hotele.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nombre %><br>
+    <%= f.text_field :nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :imagen %><br>
+    <%= f.file_field :imagen %>
+  </div>
+  <div class="field">
+    <%= f.label :imagen1 %><br>
+    <%= f.file_field :imagen1 %>
+  </div>
+  <div class="field">
+    <%= f.label :imagen2 %><br>
+    <%= f.file_field :imagen2 %>
+  </div>
+  <div class="field">
+    <%= f.label :imagen3 %><br>
+    <%= f.file_field :imagen3 %>
+  </div>
+  <div class="field">
+    <%= f.label :ubicacion %><br>
+    <%= f.text_field :ubicacion %>
+  </div>
+  <div class="field">
+    <%= f.label :descripcion %><br>
+    <%= f.text_field :descripcion %>
+  </div>
+  <div class="field">
+    <%= f.label :url %><br>
+    <%= f.text_field :url %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

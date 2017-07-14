@@ -1,0 +1,1 @@
+json.array! @zapateria, partial: 'zapateria/zapaterium', as: :zapaterium

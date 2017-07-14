@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
+
   scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
-  
+  resources :hoteles
   resources :notis
+  resources :zapateria
+  resources :idiomas
+  
+  get 'kontakto', to: "kontakto#index"
   
   get 'cocina', to: "cocina#index"
 
@@ -16,12 +21,6 @@ Rails.application.routes.draw do
   get 'viajes', to: "viajes#index"
 
   get 'outsourcing', to: "outsourcing#index"
-
-  get 'zapateria', to: "zapateria#index"
-
-  get 'idiomas', to: "idiomas#index"
-
-  get 'hoteles', to: "hoteles#index"
 
   get 'welcome/index'
   

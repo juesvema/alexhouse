@@ -1,0 +1,29 @@
+<%= form_for(@idioma, :html => {:multipart => true}) do |f| %>
+  <% if @idioma.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@idioma.errors.count, "error") %> prohibited this idioma from being saved:</h2>
+
+      <ul>
+      <% @idioma.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :modalidad %><br>
+    <%= f.text_field :modalidad %>
+  </div>
+  <div class="field">
+    <%= f.label :idioma %><br>
+    <%= f.text_field :idioma %>
+  </div>
+  <div class="field">
+    <%= f.label :imagen %><br>
+    <%= f.file_field :imagen %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

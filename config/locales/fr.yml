@@ -1,7 +1,7 @@
 fr:
   layouts:
     noticias: "Nouvelles"
-    idioma: "La langue"
+    idioma: "Les langues"
     servicios: "Prestations de service"
     hoteles: "Hôtels"
     idiomas: "Centre de langue"
@@ -13,3 +13,4 @@ fr:
     spa: "Spa"
     uniformes: "Dotation uniforme"
     cocina: "Club de cuisine"
+    general: "LIENS GÉNÉRAUX"

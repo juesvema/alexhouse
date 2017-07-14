@@ -1,7 +1,7 @@
 ger:
   layouts:
     noticias: "Nachrichten"
-    idioma: "Sprache"
+    idioma: "Sprachen"
     servicios: "Dienstleistungen"
     hoteles: "Hotels"
     idiomas: "Sprachenzentrum"
@@ -13,3 +13,4 @@ ger:
     spa: "Spa"
     uniformes: "Uniform Dotation"
     cocina: "Kochen Club"
+    general: "AllGEMEINE LINKS"

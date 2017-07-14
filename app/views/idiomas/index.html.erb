@@ -1,2 +1,27 @@
-<h1>Idiomas#index</h1>
-<p>Find me in app/views/idiomas/index.html.erb</p>
+<style>
+  .medidaImagen1{
+    width:100px;
+    height:100px;
+  }
+</style>
+<p id="notice"><%= notice %></p>
+
+<h1 class="estiloTitulo">Centro de idiomas</h1>
+
+  <tbody>
+    <div class="row" style="width: 94%; margin-left: 3%;">
+    <% @idiomas.each do |idioma| %>
+    <div class="col-md-2">
+        <%= image_tag idioma.imagen.url, :class=>"medidaImagen1" %><br>
+        <%= idioma.idioma %><br>
+        <%= idioma.modalidad %><br>
+        <%= link_to 'Show', idioma %>
+        <%#= link_to 'Edit', edit_idioma_path(idioma) %>
+        <%#= link_to 'Destroy', idioma, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
+    <% end %>
+    </div>
+  </tbody>
+<br>
+
+<%= link_to 'New Idioma', new_idioma_path %>

@@ -1,7 +1,7 @@
 arabe:
   layouts:
     noticias: "أخبار"
-    idioma: "لغة"
+    idioma: "اللغات"
     servicios: "خدمات"
     hoteles: "الفنادق"
     idiomas: "مركز اللغة"
@@ -13,3 +13,4 @@ arabe:
     spa: "منتجع صحي"
     uniformes: "التخصيص الموحد"
     cocina: "نادي الطبخ"
+    general: "الروابط العامة"
