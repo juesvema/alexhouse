@@ -1,15 +1,10 @@
-<style>
-  .medidaImagen1{
-    width:100px;
-    height:100px;
-  }
-</style>
 <p id="notice"><%= notice %></p>
 
 <h1 class="estiloTitulo">Centro de idiomas</h1>
 
   <tbody>
     <div class="row" style="width: 94%; margin-left: 3%;">
+      
     <% @idiomas.each do |idioma| %>
     <div class="col-md-2">
         <%= image_tag idioma.imagen.url, :class=>"medidaImagen1" %><br>

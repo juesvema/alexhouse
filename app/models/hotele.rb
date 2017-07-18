@@ -7,4 +7,12 @@ class Hotele < ActiveRecord::Base
   validates_attachment_content_type :imagen2, content_type: /\Aimage\/.*\z/
   has_attached_file :imagen3
   validates_attachment_content_type :imagen3, content_type: /\Aimage\/.*\z/
+  
+  def self.search(search)
+  if search
+    where(["nombre LIKE ?","search"])
+  else
+    all
+  end
+  end
 end

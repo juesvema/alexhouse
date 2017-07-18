@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   resources :zapateria
   resources :idiomas
   
+  get 'search', to: "search#index"
+  
   get 'kontakto', to: "kontakto#index"
   
   get 'cocina', to: "cocina#index"

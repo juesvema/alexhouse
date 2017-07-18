@@ -4,7 +4,7 @@ class HotelesController < ApplicationController
   # GET /hoteles
   # GET /hoteles.json
   def index
-    @hoteles = Hotele.all
+     @hoteles = Hotele.where(["nombre LIKE ?","%#{params[:search]}%"])
   end
 
   # GET /hoteles/1

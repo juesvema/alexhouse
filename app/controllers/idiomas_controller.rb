@@ -4,7 +4,7 @@ class IdiomasController < ApplicationController
   # GET /idiomas
   # GET /idiomas.json
   def index
-    @idiomas = Idioma.all
+    @idiomas = Idioma.where(["idioma LIKE ?","%#{params[:search]}%"])
   end
 
   # GET /idiomas/1

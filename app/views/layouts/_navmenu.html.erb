@@ -6,9 +6,9 @@
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="background-color: rgba(54, 85, 132, 0.1); position:absolute !important;
     border-bottom: transparent;">
    <div class="container">
-         <img src="/assets/Logo.png" width="8%">
+         <img src="/assets/Logo.png" width="12%">
          <div style="    text-align: right;
-             margin-top: -4%;
+             margin-top: -6%;
              margin-bottom: 2.5%;">
             <%= t "layouts.idioma" %>:
             <%= link_to_unless_current  image_tag("en", :class => "bandera"), locale: "en" %>
@@ -65,7 +65,19 @@
                </ul>
             </li>
          </ul>
+         <%= form_tag search_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+<% end %>
       </div>
+      <% form_tag hoteles_path, :method => 'get' do %>
+        <p>
+          <%= text_field_tag :search, params[:search] %>
+          <%= submit_tag "Search", :name => nil %>
+        </p>
+      <% end %>
       <!-- /.navbar-collapse -->
    </div>
    <!-- /.container-fluid -->
