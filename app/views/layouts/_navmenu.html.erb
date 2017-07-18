@@ -65,12 +65,16 @@
                </ul>
             </li>
          </ul>
+         <div style="margin-left: 79%; margin-top: 1%;">
          <%= form_tag search_path, :method => 'get' do %>
-  <p>
-    <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "Search", :name => nil %>
-  </p>
-<% end %>
+          <p>
+            <%= text_field_tag :search, params[:search] %>
+            <button type="button">
+            <i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+          </p>
+        <% end %>
+        </div>
       </div>
       <% form_tag hoteles_path, :method => 'get' do %>
         <p>
